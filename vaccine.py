@@ -44,7 +44,7 @@ while(True):
     
     iframes = driver.find_elements_by_tag_name("iframe")
     for iframe in iframes:
-        driver.switch_to.frame(iframe)
+        driver.switch_to_frame(iframe)
         question = driver.find_element_by_xpath('//h1[@id="question"]').text
         answers = driver.find_elements_by_xpath('//span[@class="text"]')
         for answer in answers:
@@ -55,7 +55,7 @@ while(True):
                 #click yes
                 if "Yes" in answer.text:
                     answer.click()
-        driver.switch_to.default_content()
+        driver.switch_to_default_content()
     reps+=1
     driver.refresh()
     print("Average time =", (time.time() - start)/reps )
