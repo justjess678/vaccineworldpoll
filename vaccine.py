@@ -8,9 +8,6 @@ Created on Tue Dec  8 13:10:04 2020
 
 import time
 
-from tbselenium.tbdriver import TorBrowserDriver
-from os.path import dirname, join, realpath, getsize
-
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
